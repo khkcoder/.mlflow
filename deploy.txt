@@ -14,6 +14,6 @@ Deploy using Docker
 mlflow models build-docker \
   --model-uri "models:/wine-quality-predictor/1" \
   --name "wine-quality-api"
-docker run -p 5003:8080 wine-quality-api
+docker run -p 5001:8080 wine-quality-api
 
 4) Run the testing.py
