@@ -1,19 +1,22 @@
 Deploy locally:
 1) Open new terminal in PRN folder
+export MLFLOW_TRACKING_URI="http://127.0.0.1:5000"
 2) Run the command: source myfirstproject/bin/activate
 3) Deploy the server locally: mlflow models serve -m "models:/WineQualityModel_Hyperopt/1" -p 5001 --no-conda
-4) Run the testing.py
+5) Run the testing.py
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Deploy using Docker
 
 1) Open new terminal in PRN folder
+export MLFLOW_TRACKING_URI="http://127.0.0.1:5000"
 2) Run the command: source myfirstproject/bin/activate
-3) Deploy using docker:
+3)export MLFLOW_TRACKING_URI="http://127.0.0.1:5000"
+4) Deploy using docker:
 mlflow models build-docker \
   --model-uri "models:/wine-quality-predictor/1" \
   --name "wine-quality-api"
 docker run -p 5001:8080 wine-quality-api
 
-4) Run the testing.py
+5) Run the testing.py
